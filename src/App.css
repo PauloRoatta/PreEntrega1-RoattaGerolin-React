@@ -6,22 +6,55 @@
   font-size: large;
   font-weight: 700;
 }
-.saludo{
+.titulo{
   color:rgb(183, 12, 12);
-  text-align: center;
   font-weight: 700;
+}
+
+.LinksCategory{
+  color:rgb(183, 12, 12) !important; 
+  margin-left: 8px;
+  margin-top: 10px;
+  display: block;
+text-decoration:none;
+font-weight: 700;
+
+}
+.LinksCategory:hover{
+  color:rgb(213, 22, 22) !important;
+  display: block;
+  margin-left: 16px;
+transform: scale(1.1);
 }
 .LinkName{
   color:rgb(183, 12, 12) !important; 
   font-weight: 700!important;
+  display: block;
+text-decoration:none;
+margin-top: 8px;
+margin-right: 20px;
   
+}
+.LinkName:hover{
+  color:rgb(213, 22, 22) !important;
+  font-weight: 700!important;
+  transform: scale(1.1);
 }
 #DropName{
   color:rgb(183, 12, 12) !important; 
   font-weight: 700;
 }
-#BrandName{
-  color:rgb(183, 12, 12);
+#DropName:hover{
+  color:rgb(213, 22, 22) !important;
+  font-weight: 700!important;
+  transform: scale(1.1);
+}
+#BrandNombre{
   font-weight: 700;
   font-size: 25px;
+  margin-right:50px;
+  color:rgb(183, 12, 12) !important; 
+  
+text-decoration:none;
+
 }
