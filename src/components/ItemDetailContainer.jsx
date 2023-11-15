@@ -28,7 +28,7 @@ export const ItemDetailContainer = () => {
 
     return (
         <Container className="mt-4">
-          {item ?  <ItemDetail item={item}/> : <>Loading...</> }
+            {item ? <ItemDetail item={item} /> : <>Loading...</>}
         </Container>
     );
 

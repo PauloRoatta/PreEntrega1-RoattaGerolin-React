@@ -10,12 +10,12 @@ export const NavBar = () => {
     return (
         <Navbar bg="dark" data-bs-theme="dark">
             <Container >
-                <NavLink  id="BrandNombre" to="/">Rockeala Indumentaria</NavLink>
-                <Navbar.Toggle  aria-controls="basic-navbar-nav" />
+                <NavLink id="BrandNombre" to="/">Rockeala Indumentaria</NavLink>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <NavLink className="LinkName" to="/">Inicio</NavLink>
-                        <NavLink className="LinkName" to="#link">Contacto</NavLink>
+                        <NavLink className="LinkName" to="/contacto">Contacto</NavLink>
                         <NavDropdown id="DropName" title="Productos" className="basic-nav-dropdown">
                             <NavLink className="LinksCategory" to="category/Remeras">Remeras</NavLink>
                             <NavLink className="LinksCategory" to="category/Buzo Cuello Redondo">Buzos Cuello Redondo</NavLink>

@@ -2,9 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { NavBar } from "./components/NavBar";
 import { ItemListContainer } from "./components/ItemListContainer";
-import { Error404  } from "./components/Error404";
+import { Error404 } from "./components/Error404";
 import "./App.css"
 import { ItemDetailContainer } from "./components/ItemDetailContainer";
+import { Contacto } from "./components/Contacto";
 
 function App() {
   return (
@@ -16,16 +17,20 @@ function App() {
           element={<ItemListContainer greeting="Productos" />}
         />
         <Route
+          path="/contacto"
+          element={<Contacto />}
+        />
+        <Route
           path="/category/:id"
           element={<ItemListContainer greeting="Productos" />}
         />
-         <Route
+        <Route
           path="/items/:id"
-          element={<ItemDetailContainer/>}
+          element={<ItemDetailContainer />}
         />
-         <Route
+        <Route
           path="*"
-          element={<Error404/>}
+          element={<Error404 />}
         />
       </Routes>
     </BrowserRouter>

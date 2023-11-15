@@ -1,15 +1,19 @@
 export const ItemDetail = ({ item }) => {
 
-    return(
+    return (
         <>
-        <h1>{item.title}</h1>
-        <img src={item.pictureUrl} />
+        <div className="ContenedorDetail">
         <div>
-        {item.description}
+                <h1 className="TitleDetail">{item.title}</h1>
+                <img className="ImageDetail" src={item.pictureUrl} />
+            </div>
+            <div className="DescripDetail">
+                {item.description}
+            </div>
         </div>
-
-    </>
+          
+        </>
     );
-   
+
 };
 

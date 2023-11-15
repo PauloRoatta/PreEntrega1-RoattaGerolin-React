@@ -7,9 +7,9 @@ import { products } from "../data/products";
 import { ItemList } from "../components/ItemList";
 
 export const ItemListContainer = (props) => {
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState(null);
 
-const {id}= useParams();
+    const { id } = useParams();
 
 
     useEffect(() => {
@@ -18,22 +18,21 @@ const {id}= useParams();
         });
 
         mypromise.then((response) => {
-            if(!id){
+            if (!id) {
                 setItems(response);
-            }else{
-const filterByCategory=response.filter(item => item.category === id);
-setItems(filterByCategory)
+            } else {
+                const filterByCategory = response.filter(item => item.category === id);
+                setItems(filterByCategory)
             }
-            
-        });
-        mypromise.catch(error => {  console.log ("La promise no funciona" , error)});
-}, [id]);
 
-return (
-<Container className="mt-4">
-    <h1 className="titulo">{props.greeting}</h1>
-<ItemList items={items}/>
-</Container>
-);
-    
+        });
+        mypromise.catch(error => { console.log("La promise no funciona", error) });
+    }, [id]);
+
+    return (
+        <Container className="ContenedorCards">
+            {items ? <><h1 className="titulo">{props.greeting}</h1><ItemList items={items} /></> : <>Loading...</>}
+        </Container>
+    );
+
 };
